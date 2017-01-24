@@ -1,9 +1,13 @@
 # Colorize output, add file type indicator, and put sizes in human readable format
-alias l='ls --color -h'
-alias ls='ls --color -h'
-
-# Same as above, but in long listing format
-alias ll='ls --color -hl'
+if [ "$(uname)" '==' "Darwin" ]; then
+  alias l='ls -Gh'
+  alias ls='ls -Gh'
+  alias ll='ls -Ghl'
+elif [ "$(expr substr $(uname -s) 1 5)" '==' "Linux" ]; then
+  alias l='ls --color -h'
+  alias ls='ls --color -h'
+  alias ll='ls --color -hl'
+fi
 
 # Human readable sizes for disk utilities
 alias df='df -h'
@@ -11,6 +15,8 @@ alias du='du -h'
 
 # Confirm on file deletion
 alias rm='rm -i'
+
+alias e='emacsclient -nw'
 
 # Silence google logging output
 alias glog_silence="GLOG_minloglevel=2"
