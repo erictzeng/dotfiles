@@ -1,2 +1,2 @@
-SYMLINK_DIRS="emacs.d"
+SYMLINK_DIRS="emacs.d zsh"
 EXCLUDES="*.example"
