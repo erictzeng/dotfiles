@@ -25,8 +25,8 @@ function git_prompt_info {
 
 function ssh_info {
   if [[ "$SESSION_TYPE" = 'remote/ssh' ]]; then
-    echo "%{$fg[blue]%}%m%{$reset_color%} "
+    echo "$(whoami)@%{$fg[blue]%}%m%{$reset_color%} "
   fi
 }
 
-PROMPT='$(whoami)@$(ssh_info)%~%<< $(git_prompt_info)${PR_BOLD_WHITE}>%{${reset_color}%} '
+PROMPT='$(ssh_info)%~%<< $(git_prompt_info)${PR_BOLD_WHITE}>%{${reset_color}%} '
