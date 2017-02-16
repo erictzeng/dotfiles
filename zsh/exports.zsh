@@ -23,3 +23,4 @@ path=(
 
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -nw"
+export GPG_TTY=$(tty)
