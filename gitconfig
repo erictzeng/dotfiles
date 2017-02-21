@@ -1,6 +1,6 @@
 [user]
 	name = Eric Tzeng
 [core]
-	excludesfile = /home/tzeng/.config/git/gitignore
+	excludesfile = .config/git/gitignore
 [push]
 	default = simple
