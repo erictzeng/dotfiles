@@ -24,3 +24,4 @@ path=(
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -nw"
 export GPG_TTY=$(tty)
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
